@@ -1,0 +1,15 @@
+
+version: 2
+
+models:
+  - name: playing_with_tests
+    description: "playing_with_tests"
+    columns:
+      - name: c_custkey
+        data_tests:
+          - unique
+          - not_null
+      - name: c_mktsegment
+        data_tests:
+          - accepted_values:
+              values: ['BUILDING', 'AUTOMOBILE', 'MACHINERY', 'HOUSEHOLD', 'FURNITURE']

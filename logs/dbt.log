@@ -1,0 +1,62 @@
+[0m17:35:04.712434 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x129ee1ee0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12ba26040>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12ba64310>]}
+
+
+============================== 17:35:04.717210 | efd7c553-97ff-48f8-9022-36afad081a8f ==============================
+[0m17:35:04.717210 [info ] [MainThread]: Running with dbt=1.8.3
+[0m17:35:04.717837 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'profiles_dir': '/Users/anibal.gonzalez/.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt init learn-dbt', 'send_anonymous_usage_stats': 'True'}
+[0m17:35:04.726412 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse dict {'dir': PosixPath('/Users/anibal.gonzalez/.dbt')}
+[0m17:35:04.726762 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m17:35:48.302960 [error] [MainThread]: Encountered an error:
+
+[0m17:35:48.305816 [error] [MainThread]: Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/cli/requires.py", line 138, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/cli/requires.py", line 101, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/cli/main.py", line 470, in init
+    results = task.run()
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/init.py", line 325, in run
+    project_name = self.get_valid_project_name()
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/init.py", line 279, in get_valid_project_name
+    name = click.prompt("Enter a name for your project (letters, digits, underscore)")
+  File "/usr/local/lib/python3.8/site-packages/click/termui.py", line 166, in prompt
+    value = prompt_func(prompt)
+  File "/usr/local/lib/python3.8/site-packages/click/termui.py", line 149, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m17:35:48.308130 [debug] [MainThread]: Resource report: {"command_name": "init", "command_wall_clock_time": 43.65317, "process_user_time": 1.423485, "process_kernel_time": 1.868547, "process_mem_max_rss": "104402944", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m17:35:48.308882 [debug] [MainThread]: Command `dbt init` failed at 17:35:48.308758 after 43.65 seconds
+[0m17:35:48.309357 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x129ee1ee0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12baf6670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12bb0c0a0>]}
+[0m17:35:48.309720 [debug] [MainThread]: Flushing usage events
+[0m17:35:52.651746 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12a2d0ee0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12be16040>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12be52310>]}
+
+
+============================== 17:35:52.656126 | 2bef40d7-eb6e-46df-9cf5-a32a29ab2883 ==============================
+[0m17:35:52.656126 [info ] [MainThread]: Running with dbt=1.8.3
+[0m17:35:52.656653 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/Users/anibal.gonzalez/.dbt', 'log_path': 'logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt init learn_dbt', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m17:35:52.665260 [debug] [MainThread]: Starter project path: /usr/local/lib/python3.8/site-packages/dbt/include/starter_project
+[0m17:35:52.668795 [info ] [MainThread]: 
+Your new dbt project "learn_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m17:35:52.669103 [info ] [MainThread]: Setting up your profile.
+[0m17:35:52.669586 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No adapters available. Learn how to install an adapter by going to https://docs.getdbt.com/docs/connect-adapters#install-using-the-cli
+[0m17:35:52.671334 [debug] [MainThread]: Resource report: {"command_name": "init", "command_wall_clock_time": 0.074215375, "process_user_time": 1.641953, "process_kernel_time": 1.961309, "process_mem_max_rss": "103460864", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m17:35:52.671936 [debug] [MainThread]: Command `dbt init` failed at 17:35:52.671843 after 0.07 seconds
+[0m17:35:52.672250 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12a2d0ee0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12bee55e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12befc0d0>]}
+[0m17:35:52.672536 [debug] [MainThread]: Flushing usage events
