@@ -2,6 +2,17 @@
 version: 2
 
 models:
+  - name: my_first_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          #- not_null
+          # - accepted_values:
+          #     values: [1, 2]
+          #     quote: false
   - name: playing_with_tests
     description: "playing_with_tests"
     columns:
